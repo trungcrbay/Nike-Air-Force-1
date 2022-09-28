@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    height: 100vh;
+    background: linear-gradient(to right, #4daf54, #3d8880);
+    font-family: "Poppins";
+}
+:root{
+    --primary-color: #FF6651;
+}
+.card
+{
+    margin: 120px auto;
+    width: 320px;
+    height: 400px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px; /* nội dung bên trong cách khoảng 20px so vs ngoài*/
+    color:black;
+    position: relative;
+}
+.card-heart
+{
+    font-size: 20px;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    cursor: pointer;
+}
+.card-cart 
+{
+    font-size: 20px;
+    position: absolute;
+    left: unset;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+}
+.card-img
+{
+    width: 80%;
+    margin: 10px auto;
+}
+.card-img img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-title{
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-align: center;
+    transition: 0.5s;
+}
+.card-price{
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 10px;
+    transition: 0.5s;
+    
+}
+.card-size ,.card-color{
+    display: flex;
+    align-items: center;
+}
+.card-size span{
+    padding: 1px 9px;
+    background: #dadada;
+    border-radius: 5px;
+    margin: 0 2px;
+}
+.card-color span{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 4px;  
+}
+.card-color .card-green{
+    background: green;
+}
+.card-color .card-red{
+    background: red;
+}
+.card-color .card-black{
+    background: black;
+}
+.card-action button{
+    background: green;
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin: 15px 2px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.card:hover .card-img{
+    transform: translateY(-90px) rotate(-20deg);
+    transition: 0.5s;
+}
+.card:hover .card-title, .card:hover .card-price{
+    transform: translate(-39px,-70px);
+}
+.card-size{
+    margin-top: 150px;
+}
+.card-size, .card-color, .card-action{
+    
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0.4s; /*delay thêm 0.4s rồi mới xuất hiện*/
+}
+.card:hover .card-size,
+.card:hover .card-color,
+.card:hover .card-action{
+    visibility: visible;
+    opacity: 100;
+}
+.card:hover .card-size{
+    margin-top: -30px;
+
+}
